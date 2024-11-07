@@ -1,8 +1,9 @@
 :root{
     /* --orangeColor:rgb(255, 109, 56); */
     --orangeColor:#FF6F1E;
+    --darkOrangeColor:#ff6600;
     --whiteColor:#FFFFFF;
-    --greyColor:#F5F5F5;
+    --greyColor:#eeeeee;
     --blackColor:#000000
 }
 
@@ -14,11 +15,15 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    background-color: var(--greyColor);
+}
+
 
 .main{
     width: 100%;
     height: 100vh;
-    background-color: var(--whiteColor);
+    background-color: var(--greyColor);
     display: grid;
     grid-template-columns: 20% auto;
     /* column-gap: 1rem; */
@@ -157,7 +162,7 @@
     text-align: center;
     color: var(--whiteColor);
     font-size: small;
-    border-radius: 4px;
+    border-radius: 3px;
     padding: 0.2rem 0rem 0.2rem 0rem;
 }
 
@@ -190,32 +195,558 @@
 }
 
 
-
-
+/* ====================================================================== */
 
 
 
 
 .right{
-    background-color: var(--whiteColor);
+    background-color: var(--greyColor);
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% auto;
+    grid-template-rows: auto;
     padding: 1rem;
     column-gap: 1rem;
 
 }
 
 .middle{
-    background-color: antiquewhite;
+    background-color: var(--greyColor);
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows:  55% 45%;
+    row-gap: 0.5rem;
     border-radius: 1rem;
 
 }
+
+
+.middleMain{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--whiteColor);
+    border-radius: 2rem 2rem 1rem 1rem;
+}
+
+.triangle{
+  width: 0px;
+  height: 0px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 25px solid var(--darkOrangeColor);
+  transform: rotate(180deg);
+}
+
+.middleUpH3{
+    text-align: center;
+    font-weight: 550;
+    padding: 0.5rem 0rem;
+}
+
+.middleUpDetailExamDiv{
+    border: 2px solid var(--orangeColor);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 35%;
+
+}
+
+.middleUpDetailsKeys{
+    background-color: var(--orangeColor);
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--whiteColor);
+    font-size: small;
+    border-radius: 3px;
+    padding: 0.3rem 0rem 0.3rem 0rem;
+}
+
+.middleUpDetailsValues{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-size: small;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.smallTriangle{
+    width: 0px;
+    height: 0px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--darkOrangeColor);
+    transform: rotate(180deg);
+    cursor: pointer;
+  }
+
+
+
+  .middleUpDetailSessionDiv{
+    border: 2px solid var(--orangeColor);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 45%;
+    margin-top: 0.5rem;
+
+}
+
+.middleUpDetailsSessionKeys{
+    background-color: var(--orangeColor);
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--whiteColor);
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 0.3rem 0rem 0.3rem 0rem;
+}
+.middleUpDetailsSessionKeys2{
+    background-color: var(--orangeColor);
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--whiteColor);
+    font-size: 1.1rem;
+    line-height: 1;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 0.3rem 0rem 0.3rem 0rem;
+}
+
+.middleUpDetailsSessionValues{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.hwComplitionDiv{
+    background-color: var(--greyColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    border-radius: 10px;
+    margin-top: 1rem;
+    padding: 1rem;
+    /* padding-bottom: 2rem; */
+}
+
+
+.hwPiaChart{
+    display: flex;
+    flex-direction: column;
+ 
+
+    
+
+}
+
+.hwCompletionP{
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 800;
+   
+}
+
+
+
+
+.HwCompletionPiaChartDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* grid-template-rows: auto; */
+    height: auto;
+    /* background-color: chocolate; */
+    width: 100%;
+}
+
+.leftLabels{
+ 
+
+    z-index: 1;
+    background-color:transparent;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+
+}
+
+
+.leftLabel{
+    border-bottom: 2px solid rgb(86, 86, 86);
+    padding-right: 5rem;
+    padding-left: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.leftLabel1{
+    padding-right: 5rem;
+    padding-left: 5px;
+    color: gray;
+    font-weight: bold;
+}
+
+
+
+
+.rightLabels{
+ 
+    z-index: 1;
+    background-color: transparent;
+    width: 100%;
+    text-align: end;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+
+.rightLabel{
+    /* background-color: aqua; */
+    border-bottom: 2px solid rgb(86, 86, 86);
+    padding-left: 5rem;
+    padding-right: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+   
+}
+
+.rightLabel1{
+    padding-left: 5rem;
+    padding-right: 5px;
+    color: gray;
+    font-weight: bold;
+   
+}
+
+
+
+
+
+
+#pieChart{
+    /* background-color: aqua; */
+    transform: rotate(90deg);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.middleMain1{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--whiteColor);
+    border-radius: 1rem 1rem 2rem 2rem;
+    padding: 1rem;
+}
+
+
+.middleMain1Div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+    width: 95%;
+    
+    
+
+}
+
+
+.middleUpDetailExamDiv1{
+    border: 2px solid var(--orangeColor);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 45%;
+
+}
+
+.middleUpDetailsKeys1{
+    background-color: var(--orangeColor);
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--whiteColor);
+    font-size: small;
+    border-radius: 3px;
+    padding: 0.3rem 0rem 0.3rem 0rem;
+}
+
+.middleUpDetailsValues1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-size: small;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+#pieChart1{
+    transform: rotate(270deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .right1{
-    background-color: antiquewhite;
+    background-color: var(--greyColor);
     border-radius: 1rem;
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 0.5rem;
+    border-radius: 1rem;
+    /* height: 100vh; */
 
 
 }
+
+
+.dataChart{
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+.container11 {
+    width: 400px;
+    height: 200px;
+    /* border: 1px solid #ccc; */
+    /* background-color: blue; */
+    /* margin: 10px auto; */
+    position: relative;
+    padding-left: 5px;
+  }
+  
+  .chart {
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    width: 365px;
+    height: 260px;
+  }
+  
+  .line {
+    fill: none;
+    stroke: #f57f17;
+    stroke-width: 2px;
+  }
+  
+  .dot {
+    fill: #f57f17;
+    /* stroke: #fff; */
+    stroke-width: 1px;
+  }
+
+
+  .chart1{
+    background-color: aqua;
+  
+  }
+
+  
+  .axis {
+    font-size: 12px;
+    /* position: absolute;  */
+    /* bottom: 0; 
+    left: 0;  */
+    width: 100%; 
+  }
+  
+  /* .x-axis {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    width: 460px;
+    height: 20px;
+  }
+  
+  .y-axis {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 20px;
+    height: 260px;
+  } */
+
+
+
+
+/* ====================bar Garph css ======================== */
+
+
+
+
+
+.BarGraph {
+    margin-top: 1rem;
+    width: 90%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    /* margin: 50px auto; */
+    padding-top: 2rem;
+    padding-left: 0.7rem;
+    background-color: var(--blackColor);
+  }
+  
+  .row {
+    width: 103%;
+    height: 30px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    background-color: #FFA500;
+  }
+  
+  .bar {
+    height: 100%;
+    width: 0;
+    transition: width 0.5s ease;
+  }
+  
+  .row:hover .bar {
+    width: 80%;
+  }
+  
+  .row:nth-child(1) .bar {
+    width: 90%;
+    background-color: #ffe8e0;
+  }
+  
+  .row:nth-child(2) .bar {
+    width: 70%;
+    background-color: antiquewhite;
+  }
+  
+  .row:nth-child(3) .bar {
+    width: 95%;
+    background-color: #ffe8e0;
+  }
+  
+  .row:nth-child(4) .bar {
+    width: 85%;
+    background-color: antiquewhite;
+  }
+  
+  .row:nth-child(5) .bar {
+    width: 80%;
+    background-color: #ffe8e0;
+  }
+  
+  .row:nth-child(6) .bar {
+    width: 75%;
+    background-color: antiquewhite;
+  }
+  
+  .row:nth-child(7) .bar {
+    width: 90%;
+    background-color: #ffe8e0;
+  }
+  
+  .row:nth-child(8) .bar {
+    width: 100%;
+    background-color: antiquewhite;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -225,7 +756,7 @@
     .main{
         width: 100%;
         height: 100vh;
-        background-color: black;
+        /* background-color: black; */
         display: grid;
         grid-template-columns:25% auto;
         
@@ -234,7 +765,7 @@
     
     }
     .right{
-        background-color: blue;
+        /* background-color: blue; */
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto auto;
@@ -243,6 +774,15 @@
         height: auto;
     
     }
+
+
+    .row {
+        width: 102%;
+        height: 30px;
+        display: flex;
+        border-bottom: 1px solid #ccc;
+        background-color: #FFA500;
+      }
 
 }
 
@@ -262,7 +802,8 @@
     .main{
         width: 100%;
         height: auto;
-        background-color: black;
+        background-color: var(--greyColor);
+        /* background-color: black; */
         display: grid;
         grid-template-columns: auto;
         grid-template-rows:auto auto;
@@ -300,7 +841,7 @@
 
     
     .right{
-        background-color: blue;
+        /* background-color: blue; */
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto auto;
@@ -310,21 +851,78 @@
     
     }
 
+    .middle{
+        background-color: var(--greyColor);
+        border-radius: 1rem;
+        display: grid;
+        grid-template-rows: 55% 45%;
+        row-gap: 0.5rem;
+        border-radius: 1rem;
+        /* height: 100vh; */
+    
+    }
 
 
 
+/* 
     .middle{
         background-color: antiquewhite;
         border-radius: 1rem;
         height: 100vh;
     
+    } */
+
+/* 
+    .rightLabels {
+        position: absolute;
+        left: 80%;
+        top: 35%;
+        z-index: 1;
+        background-color: transparent;
+        width: 69%;
+        text-align: end;
     }
+ */
+
+
+
+
+
+
+
+
+
+
+
+
     .right1{
-        background-color: antiquewhite;
+        background-color: var(--greyColor);
         border-radius: 1rem;
-        height: 100vh;
+
+        border-radius: 1rem;
+        /* height: 100vh; */
     
     
     }
+
+
+    .row {
+        width: 103%;
+        height: 30px;
+        display: flex;
+        border-bottom: 1px solid #ccc;
+        background-color: #FFA500;
+      }
+
+      .middleMain {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--whiteColor);
+        border-radius: 2rem 2rem 1rem 1rem;
+        padding-bottom: 2rem;
+    }
+
    
   }
